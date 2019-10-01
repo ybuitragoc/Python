@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 30 20:19:34 2019
+
+@author: andre
+"""
+
+#import sys
+import sys
+import numpy as np
+
+#thousand number list
+N = range(1000) 
+
+# result with Numpy
+print("Result:")
+
+print(sys.getsizeof(5)*len(N))
+
+# result with Python
+M = np.arange(1000)
+print(M.size*M.itemsize)

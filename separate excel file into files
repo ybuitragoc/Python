@@ -1,0 +1,23 @@
+#by: Yulieth Andrea Buitrago Cortes 
+
+import pandas as pd 
+#leer el archivo de excel, con la hoja correspondiente
+df = pd.read_excel('Origen.xlsx','Hoja1')
+#iniciamos contador que nos permite incrementar
+contador_inicio = 0
+#variable rango que permite elegir de que rango a que rango vamos
+rango = 0
+#condicion en el while para total de registros 
+while contador_inicio < (23/5):
+	#incrementamos el contador
+	contador_inicio = contador_inicio + 1
+	#rango inicial, para saber donde comienza
+	rango_ini = rango 
+	#rango final, o sea el inicio mas la cantidad de registros deseados
+	rango_fin = rango_ini + 5
+	#setear variable de rango con el numero inicial de cada archivo
+	rango= rango_fin
+	#asignar a variable export el rango que queremos que se imprima
+	export = df[rango_ini:rango_fin]
+	#Exportar excel con nombre y cosecutivo, para que no se confunda
+	export.to_excel('Archivo_Numero'+ str(contador_inicio) +'_.xlsx', sheet_name='Hoja1')

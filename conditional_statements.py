@@ -5,7 +5,7 @@ m_edad = 18
 if edad >= m_edad:
     print ("Eres mayor de edad")
     if False:
-        print  ("Esto se ejecuta siempre que sea mayr de edad")
+        print  ("Esto sse ejecuta siempre que sea mayr de edad")
     else:
         print("Cualquier cosa")
 else:
